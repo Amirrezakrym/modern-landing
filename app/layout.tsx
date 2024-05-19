@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import localFont from 'next/font/local'
+import Navbar from "@/components/navbar/navbr";
 
+
+const captionfont = localFont({src : '../public/assets/Fonts/Jost-Medium.ttf'})
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,7 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <body className={inter.className}>
+    <Navbar />
+      {children}
+      
+      </body>
+  </html>
   );
 }
