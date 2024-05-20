@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper {
+    height: 19rem;
+}
+.swiper-pagination-bullet-active {
+    background-color: black !important;
+}
