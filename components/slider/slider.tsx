@@ -44,7 +44,7 @@ const Slider = () => {
                 <div className='text-sm'>Greenville, USA</div>
             </div>
         </div>
-        <p className='max-w-64 text-[14px] sm:text-[16px]'>Lorem Ipsum is simply dummy 
+        <p className='max-w-64 text-[14px] sm:text-[16px] text-[#545656]'>Lorem Ipsum is simply dummy 
         text of the typesetting industry. 
         Ipsum has been.
         </p>
@@ -60,7 +60,7 @@ const Slider = () => {
                 <div className='text-sm'>Oak Ridge, USA</div>
             </div>
         </div>
-        <p className='max-w-64 text-[14px] sm:text-[16px]'>Lorem Ipsum is simply dummy 
+        <p className='max-w-64 text-[14px] sm:text-[16px] text-[#545656]'>Lorem Ipsum is simply dummy 
         text of the typesetting industry. 
         Ipsum has been.
         </p>
@@ -75,7 +75,7 @@ const Slider = () => {
                 <div className='text-sm'>Berlin, Germany</div>
             </div>
         </div>
-        <p className='max-w-64 text-[14px] sm:text-[16px]'>Lorem Ipsum is simply dummy 
+        <p className='max-w-64 text-[14px] sm:text-[16px] text-[#545656]'>Lorem Ipsum is simply dummy 
         text of the typesetting industry. 
         Ipsum has been.
         </p>
@@ -90,7 +90,7 @@ const Slider = () => {
                 <div className='text-sm'>Blue Ridge, France</div>
             </div>
         </div>
-        <p className='max-w-64 text-[14px] sm:text-[16px]'>Lorem Ipsum is simply dummy 
+        <p className='max-w-64 text-[14px] sm:text-[16px] text-[#545656]'>Lorem Ipsum is simply dummy 
         text of the typesetting industry. 
         Ipsum has been.
         </p>
@@ -106,7 +106,7 @@ const Slider = () => {
                 <div className='text-sm'>Blue Ridge, France</div>
             </div>
         </div>
-        <p className='max-w-64 text-[14px] sm:text-[16px]'>Lorem Ipsum is simply dummy 
+        <p className='max-w-64 text-[14px] sm:text-[16px] text-[#545656]'>Lorem Ipsum is simply dummy 
         text of the typesetting industry. 
         Ipsum has been.
         </p>

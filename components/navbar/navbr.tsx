@@ -1,14 +1,16 @@
 'use client'
+import { usePathname } from 'next/navigation'
 import Image from "next/image";
 import Link from "next/link";
-import { BiX ,BiMenuAltRight  } from "react-icons/bi";
+import { BiX ,BiMenuAltRight, BiSearch  } from "react-icons/bi";
 import { useState } from "react";
 
 const Navbar = () => {
+    const pathname = usePathname()
     const [isOpen, setIsOpen] = useState(false)
 
     function getMenuClasses(){
-        let menuClasses = [];
+        let menuClasses = ["transition-all", "duration-700", ];
 
             if(isOpen){
                 menuClasses = [
@@ -20,51 +22,59 @@ const Navbar = () => {
                     "p-3",
                     "left-0",
                     "gap-5",
-                    "flex-col"
+                    "flex-col",
+                    "transition-all",
+                     "duration-700" 
                 ];
             }else{
                 menuClasses = [
                     "hidden",
-                    "md:flex"
+                    "md:flex",
+                    "transition-all",
+                     "duration-700" 
                 ]
             }
         return menuClasses.join(" ")
     }
     return ( 
-    <nav className="sticky top-0 shadow-xl  z-30 bg-white p-3 sm:p-4 md:justify-between md:items-center">
-        <div className="container mx-auto flex justify-between items-center">
+    <nav className="sticky top-0 shadow-xl  z-30 bg-white p-3 sm:p-4 md:justify-between md:items-center transition-all duration-700 ">
+        <div className="container mx-auto flex justify-between items-center transition-all duration-700 ">
 
             <Link href={'#'} className="text-2xl font-bold"> <Image alt="logo" src="/assets/logo.svg" width={150} height={150}></Image> </Link>
 
-            <div className={getMenuClasses()}>
-                <Link href={'/'} className="mx-2 transition-all duration-300 hover:text-[#b88c5d]">
+            <div className={`transition-all duration-700 ${getMenuClasses()}`}>
+                <Link href={'/'} className={`mx-2 transition-all duration-300 hover:text-[#b88c5d] ${pathname === '/' ? 'text-[#b88c5d]' : ''}`}>
                     Home
                 </Link>
                 <Link href={'/'} className="mx-2 transition-all duration-300 hover:text-[#b88c5d]">
-                    About
+                    Pages
                 </Link>
                 <Link href={'/'} className="mx-2 transition-all duration-300 hover:text-[#b88c5d]">
-                    Testimonials
+                    Services
                 </Link>
                 <Link href={'/'} className="mx-2 transition-all duration-300 hover:text-[#b88c5d]">
-                    Our Work
+                    Project
                 </Link>
                 <Link href={'/'} className="mx-2 transition-all duration-300 hover:text-[#b88c5d]">
-                    News
+                    Blog
                 </Link>
                 <Link href={'/'} className="mx-2 transition-all duration-300 hover:text-[#b88c5d]">
                     Contact
                 </Link>
+                <Link href={'/'} className="mx-2 transition-all duration-300 hover:text-[#b88c5d]">
+                     <BiSearch className="text-2xl hidden md:block" />
+                </Link>
             </div>
             
-            <div className="md:hidden flex items-center">
+            <div className="md:hidden flex items-center transition-all duration-700 ">
                 <button
+                className="transition-all duration-700 "
                 onClick={()=>{
                     setIsOpen(!isOpen)
                 }}
                 >
                 
-                {isOpen ? ( <BiX  className="text-3xl"/> ) : ( <BiMenuAltRight  className="text-3xl"/> )}
+                {isOpen ? ( <BiX  className="text-3xl transition-all duration-700 "/> ) : ( <BiMenuAltRight  className="text-3xl transition-all duration-700 "/> )}
                 </button>
 
             </div>
